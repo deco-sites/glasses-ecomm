@@ -116,10 +116,10 @@ function BannerItem(
       id={id}
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative overflow-y-hidden w-full"
+      class="relative overflow-y-hidden w-full h-[60vh]"
     >
       {action && (
-        <div class="absolute top-0 md:bottom-0 bottom-1/2 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
+        <div class="absolute bottom-0 md:bottom-24 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
           <span class="text-2xl font-light text-base-100">
             {action.title}
           </span>
@@ -127,7 +127,7 @@ function BannerItem(
             {action.subTitle}
           </span>
           <Button
-            class="bg-base-100 text-sm font-light py-4 px-6 w-fit"
+            class="text-sm font-light py-4 px-6 w-fit bg-accent leading-none text-white"
             aria-label={action.label}
           >
             {action.label}
@@ -150,7 +150,7 @@ function BannerItem(
           height={600}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-cover w-full h-full object-top"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -226,7 +226,7 @@ function BannerCarousel(props: Props) {
   return (
     <div
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] sm:min-h-min min-h-[660px]"
+      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] sm:min-h-min min-h-[375px]"
     >
       <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
         {images?.map((image, index) => {

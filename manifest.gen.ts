@@ -106,18 +106,22 @@ const manifest = {
     "deco-sites/glasses-ecomm/sections/Layout/GridItem.tsx": $$$$$$32,
     "deco-sites/glasses-ecomm/sections/Links/LinkTree.tsx": $$$$$$33,
     "deco-sites/glasses-ecomm/sections/Links/Shortcuts.tsx": $$$$$$34,
-    "deco-sites/glasses-ecomm/sections/Miscellaneous/CampaignTimer.tsx": $$$$$$35,
-    "deco-sites/glasses-ecomm/sections/Miscellaneous/CookieConsent.tsx": $$$$$$36,
+    "deco-sites/glasses-ecomm/sections/Miscellaneous/CampaignTimer.tsx":
+      $$$$$$35,
+    "deco-sites/glasses-ecomm/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$36,
     "deco-sites/glasses-ecomm/sections/Miscellaneous/Slide.tsx": $$$$$$37,
     "deco-sites/glasses-ecomm/sections/Newsletter/Newsletter.tsx": $$$$$$38,
     "deco-sites/glasses-ecomm/sections/Product/ImageGalleryFrontBack.tsx":
       $$$$$$39,
-    "deco-sites/glasses-ecomm/sections/Product/ImageGallerySlider.tsx": $$$$$$40,
+    "deco-sites/glasses-ecomm/sections/Product/ImageGallerySlider.tsx":
+      $$$$$$40,
     "deco-sites/glasses-ecomm/sections/Product/NotFound.tsx": $$$$$$41,
     "deco-sites/glasses-ecomm/sections/Product/NotFoundChallenge.tsx": $$$$$$42,
     "deco-sites/glasses-ecomm/sections/Product/ProductInfo.tsx": $$$$$$43,
     "deco-sites/glasses-ecomm/sections/Product/ProductShelf.tsx": $$$$$$44,
-    "deco-sites/glasses-ecomm/sections/Product/ProductShelfTabbed.tsx": $$$$$$45,
+    "deco-sites/glasses-ecomm/sections/Product/ProductShelfTabbed.tsx":
+      $$$$$$45,
     "deco-sites/glasses-ecomm/sections/Product/SearchResult.tsx": $$$$$$46,
     "deco-sites/glasses-ecomm/sections/Product/ShelfWithImage.tsx": $$$$$$47,
     "deco-sites/glasses-ecomm/sections/Product/Wishlist.tsx": $$$$$$48,

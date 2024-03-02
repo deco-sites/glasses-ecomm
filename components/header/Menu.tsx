@@ -9,7 +9,7 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="collapse collapse-plus">
       <input type="checkbox" />
-      <div class="collapse-title">{item.name}</div>
+      <div class={`collapse-title ${item.identifier} ${item.identifier ? 'text-accent' : ''}`}>{item.name}</div>
       <div class="collapse-content">
         <ul>
           <li>
@@ -37,13 +37,13 @@ function Menu({ items }: Props) {
         ))}
       </ul>
 
-      <ul class="flex flex-col py-2 bg-base-200">
+      <ul class="flex flex-col py-2 bg-gray-100">
         <li>
           <a
             class="flex items-center gap-4 px-4 py-2"
             href="/wishlist"
           >
-            <Icon id="Heart" size={24} strokeWidth={2} />
+            <Icon id="Heart" size={18} strokeWidth={2} fill={'transparent'} />
             <span class="text-sm">Lista de desejos</span>
           </a>
         </li>
@@ -52,16 +52,7 @@ function Menu({ items }: Props) {
             class="flex items-center gap-4 px-4 py-2"
             href="https://www.deco.cx"
           >
-            <Icon id="MapPin" size={24} strokeWidth={2} />
-            <span class="text-sm">Nossas lojas</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-4 px-4 py-2"
-            href="https://www.deco.cx"
-          >
-            <Icon id="Phone" size={24} strokeWidth={2} />
+            <Icon id="Phone" size={18} strokeWidth={2} />
             <span class="text-sm">Fale conosco</span>
           </a>
         </li>
@@ -70,7 +61,7 @@ function Menu({ items }: Props) {
             class="flex items-center gap-4 px-4 py-2"
             href="https://www.deco.cx"
           >
-            <Icon id="User" size={24} strokeWidth={2} />
+            <Icon id="User" size={18} strokeWidth={2} />
             <span class="text-sm">Minha conta</span>
           </a>
         </li>
