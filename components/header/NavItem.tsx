@@ -9,7 +9,11 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   return (
     <li class="group flex items-center">
       <a href={url} class="py-6">
-        <span class={`group-hover:underline text-xs ${item.identifier ? 'text-accent font-semibold': 'font-thin'}`}>
+        <span
+          class={`group-hover:underline text-xs ${
+            item.identifier ? "text-accent font-semibold" : "font-thin"
+          }`}
+        >
           {name}
         </span>
       </a>

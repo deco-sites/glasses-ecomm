@@ -139,7 +139,7 @@ export default function FAQ(props: Props) {
             />
           </div>
           <div class="order-2 lg:order-3 lg:row-span-2">
-            <div class="join join-vertical">
+            <div class="join join-vertical w-full">
               {questions.map((question) => <Question {...question} />)}
             </div>
           </div>

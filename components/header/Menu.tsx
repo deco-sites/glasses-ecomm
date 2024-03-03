@@ -9,7 +9,13 @@ function MenuItem({ item }: { item: SiteNavigationElement }) {
   return (
     <div class="collapse collapse-plus">
       <input type="checkbox" />
-      <div class={`collapse-title ${item.identifier} ${item.identifier ? 'text-accent' : ''}`}>{item.name}</div>
+      <div
+        class={`collapse-title ${item.identifier} ${
+          item.identifier ? "text-accent" : ""
+        }`}
+      >
+        {item.name}
+      </div>
       <div class="collapse-content">
         <ul>
           <li>
@@ -43,7 +49,7 @@ function Menu({ items }: Props) {
             class="flex items-center gap-4 px-4 py-2"
             href="/wishlist"
           >
-            <Icon id="Heart" size={18} strokeWidth={2} fill={'transparent'} />
+            <Icon id="Heart" size={18} strokeWidth={2} fill={"transparent"} />
             <span class="text-sm">Lista de desejos</span>
           </a>
         </li>

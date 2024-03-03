@@ -104,7 +104,7 @@ function ProductCard({
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block border-accent border-2 text-accent bg-white hover:bg-accent hover:text-white hover:border-accent"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -140,10 +140,7 @@ function ProductCard({
           },
         }}
       />
-      <figure
-        class="relative overflow-hidden"
-        style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
-      >
+      <figure class="relative overflow-hidden">
         {/* Wishlist button */}
 
         <div
@@ -176,8 +173,8 @@ function ProductCard({
           </div>
           {/* Discount % */}
           {!l?.hide?.discount && (
-            <div class="text-sm bg-base-100 p-[10px]">
-              <span class="text-base-content font-bold">
+            <div class="text-sm bg-secondary text-white p-[10px]">
+              <span class="text-white font-bold">
                 {listPrice && price
                   ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `
                   : ""}
@@ -198,7 +195,7 @@ function ProductCard({
             alt={front.alternateName}
             width={WIDTH}
             height={HEIGHT}
-            class={`bg-base-100 col-span-full row-span-full rounded w-full ${
+            class={`bg-base-100 col-span-full row-span-full rounded w-2/3 lg:1/3 2xl:w-2/4 mx-auto ${
               l?.onMouseOver?.image == "Zoom image"
                 ? "duration-100 transition-scale scale-100 lg:group-hover:scale-125"
                 : ""
@@ -215,7 +212,7 @@ function ProductCard({
               alt={back?.alternateName ?? front.alternateName}
               width={WIDTH}
               height={HEIGHT}
-              class="bg-base-100 col-span-full row-span-full transition-opacity rounded w-full opacity-0 lg:group-hover:opacity-100"
+              class="bg-base-100 col-span-full row-span-full transition-opacity rounded w-2/3 lg:1/3 2xl:w-2/4 mx-auto opacity-0 lg:group-hover:opacity-100"
               sizes="(max-width: 640px) 50vw, 20vw"
               loading="lazy"
               decoding="async"
@@ -240,7 +237,7 @@ function ProductCard({
         </figcaption>
       </figure>
       {/* Prices & Name */}
-      <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-2">
+      <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-2 text-center">
         {/* SKU Selector */}
         {(!l?.elementsPositions?.skuSelector ||
           l?.elementsPositions?.skuSelector === "Top") && (
@@ -303,14 +300,20 @@ function ProductCard({
                 } ${align === "center" ? "justify-center" : "justify-end"}`}
               >
                 <div
-                  class={`line-through text-base-300 text-xs font-light ${
+                  class={`line-through text-base-300 text-base font-light italic ${
                     l?.basics?.oldPriceSize === "Normal" ? "lg:text-sm" : ""
                   }`}
                 >
-                  {formatPrice(listPrice, offers?.priceCurrency)}
+                  {formatPrice(listPrice, offers?.priceCurrency)?.replace(
+                    ",00",
+                    "",
+                  )}
                 </div>
-                <div class="text-base-content lg:text-sm font-light">
-                  {formatPrice(price, offers?.priceCurrency)}
+                <div class="text-base-content text-xl lg:text-3xl font-light italic">
+                  {formatPrice(price, offers?.priceCurrency)?.replace(
+                    ",00",
+                    "",
+                  )}
                 </div>
               </div>
             </div>
