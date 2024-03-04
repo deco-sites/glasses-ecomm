@@ -13,7 +13,7 @@ export interface Props {
 
 export default function MultipleBanners({ banners, quantity }: Props) {
   return (
-    <div class="container multipleBanners">
+    <div class="multipleBanners">
       <div class={`md:grid md:grid-cols-${quantity}`}>
         {banners.map((banner) => {
           return (

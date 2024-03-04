@@ -25,14 +25,16 @@ export interface Props {
     variation?: "Simple" | "With border" | "Color reverse";
     headerAlignment?: "center" | "left";
   };
+  showTitle?: boolean;
+  showDescription?: boolean;
 }
 
 export default function Benefits(
   props: Props,
 ) {
   const {
-    title = "Benefits",
-    description = "Check out the benefits",
+    title = "",
+    description = "",
     benefits = [{
       icon: "Truck",
       label: "Entrega em todo Brasil",
@@ -90,7 +92,7 @@ export default function Benefits(
           </div>
           <p
             class={`text-sm leading-5 ${
-              reverse ? "text-base-100" : "text-neutral"
+              reverse ? "text-base-100" : "text-[#979797]"
             } ${benefitLayout == "piledup" ? "hidden lg:block" : ""}`}
           >
             {benefit.description}
@@ -106,8 +108,8 @@ export default function Benefits(
         ? (
           <div class="w-full container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
             <Header
-              title={title}
-              description={description}
+              title={title ? title : ''}
+              description={description ? description : ''}
               alignment={layout?.headerAlignment || "center"}
             />
             <div class="w-full flex justify-center">
