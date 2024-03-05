@@ -108,8 +108,8 @@ export default function Benefits(
         ? (
           <div class="w-full container px-4 py-8 flex flex-col gap-8 lg:gap-10 lg:py-10 lg:px-0">
             <Header
-              title={title ? title : ''}
-              description={description ? description : ''}
+              title={title ? title : ""}
+              description={description ? description : ""}
               alignment={layout?.headerAlignment || "center"}
             />
             <div class="w-full flex justify-center">
