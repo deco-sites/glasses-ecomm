@@ -70,8 +70,7 @@ function ProductInfo({ page, layout }: Props) {
   });
 
   return (
-    <div class="flex flex-col" id={id}>
-      <Breadcrumb itemListElement={breadcrumb.itemListElement} />
+    <div class="flex flex-col px-6 lg:px-0" id={id}>
       {/* Code and name */}
       <div class="mt-4 sm:mt-8">
         <div>
@@ -89,14 +88,14 @@ function ProductInfo({ page, layout }: Props) {
       </div>
       {/* Prices */}
       <div class="mt-4">
-        <div class="flex flex-row gap-2 items-center">
+        <div>
           {(listPrice ?? 0) > price && (
-            <span class="line-through text-base-300 text-xs">
-              {formatPrice(listPrice, offers?.priceCurrency)}
+            <span class="line-through text-base-300 text-xs md:text-lg block italic">
+              {formatPrice(listPrice, offers?.priceCurrency)?.replace(",00", "")}
             </span>
           )}
-          <span class="font-medium text-xl text-secondary">
-            {formatPrice(price, offers?.priceCurrency)}
+          <span class="font-medium text-xl md:text-3xl text-black block italic">
+            {formatPrice(price, offers?.priceCurrency)?.replace(",00", "")}
           </span>
         </div>
         <span class="text-sm text-base-300">{installments}</span>
