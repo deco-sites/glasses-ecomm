@@ -96,10 +96,10 @@ function CartItem(
         </div>
         <div class="flex items-center gap-2">
           <span class="line-through text-sm">
-            {formatPrice(list, currency, locale)}
+            {formatPrice(list, currency, locale)?.replace(',00', '')}
           </span>
-          <span class="text-sm text-secondary">
-            {isGift ? "Grátis" : formatPrice(sale, currency, locale)}
+          <span class="text-sm text-primary">
+            {isGift ? "Grátis" : formatPrice(sale, currency, locale)?.replace(',00', '')}
           </span>
         </div>
 

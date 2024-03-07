@@ -91,7 +91,10 @@ function ProductInfo({ page, layout }: Props) {
         <div>
           {(listPrice ?? 0) > price && (
             <span class="line-through text-base-300 text-xs md:text-lg block italic">
-              {formatPrice(listPrice, offers?.priceCurrency)?.replace(",00", "")}
+              {formatPrice(listPrice, offers?.priceCurrency)?.replace(
+                ",00",
+                "",
+              )}
             </span>
           )}
           <span class="font-medium text-xl md:text-3xl text-black block italic">
